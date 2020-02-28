@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+
+  <head>
+    <meta charset="utf-8">
+
+
+    <style>
+      body, html { 
+          margin: 0;
+          padding: 0;
+          height: 100%;
+      }
+      .bgimg {
+          border: 0;
+          padding: 0; 
+          background-image: url('./img/contactbg.jpg');
+          min-height: 100%;
+          background-position: center;
+          background-size: cover;
+      }
+      
+      
+     
+      a:link { color: red; text-decoration: none;}
+      a:visited { color: black; text-decoration: none;}
+      a:hover { color: blue; text-decoration: underline;}
+      
+      @media 
+      only screen and (min-device-width : 375px) 
+      and (max-device-width : 812px) 
+      and (-webkit-device-pixel-ratio : 3) {  
+        .mainimg{
+          width:70%;
+          margin-top:100px;
+        }
+        #bottom-inner{
+          padding-top:100px;
+        }
+
+        .bottom-inner-left {
+          width:calc(100% / 3);
+          height:100%;
+          text-align:left;
+        }
+
+        .bottom-inner-middle {
+          width:calc(100% / 3);
+          height:100%;
+          /* text-align:center; */
+        }
+
+        .bottom-inner-right {
+          width:calc(100% / 3);
+          height:100%;
+          text-align:right;
+        }
+      }
+
+
+
+      /* desktop */
+      @media (min-width: 1281px) {
+        .mainimg{
+          width:50%;
+          margin-top:100px;
+        }
+        #bottom-inner{
+          padding-top:100px;
+        }
+
+        .bottom-inner-left {
+          width:calc(100% / 3);
+          height:100%;
+          text-align:right;
+        }
+
+        .bottom-inner-middle {
+          width:calc(100% / 3);
+          height:100%;
+          text-align:center;
+        }
+
+        .bottom-inner-right {
+          width:calc(100% / 3);
+          height:100%;
+          text-align:left;
+        }
+
+      }
+
+     
+
+
+       
+      </style>
+  </head>
+  <body>
+    <div class="bgimg">
+      
+     <div id="top" style="text-align:center;">
+        <a href="/">
+            <img class="mainimg"src="./img/main.png" alt="">
+        </a> 
+      </div> 
+      
+      <div id="bottom">
+        <div id="bottom-inner" style="width:100%;height:20%;text-align: center;">
+            <div>
+                <span style="color:white;font-size:80px;font-weight: bolder; ">Hannam-dong, 
+                    <br>
+                    Yongsan-gu, Seoul, Korea
+                    <br>
+                </span>
+                <span style="color:white;font-size:40px;font-weight: bolder;">
+                    <br>
+                    OWNER. KIM NAN YOUNG
+                    <br>   
+                    BUSINESS LICENSE. 010-2730-6820
+                    <br>
+                        CALL CENTER. 010-2730-6820
+                    <br>  
+                        MAIL. test@test.com
+                </span>
+            </div>
+        </div>
+      </div> 
+
+    </div>  
+  
+  </body>
+  </html>
+  
+<script>
+$(document).ready(function(){
+   var windowWidth = $( window ).width();
+  var windowHeight = $( window ).height();
+  $("#top").css('width',windowWidth+'px').css('height',parseInt(windowHeight) / 2 +'px');
+  $("#bottom").css('width',windowWidth+'px').css('height',parseInt(windowHeight) / 2 +'px');
+
+});
+
+</script>
