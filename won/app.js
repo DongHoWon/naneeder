@@ -10,9 +10,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./server/routes/index');
-var usersRouter = require('./server/routes/users');
-var patientRouter = require('./server/routes/patient');
-var skRouter = require('./server/routes/skdemo');
+
 
 
 // view engine setup
@@ -25,9 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/skdemo', skRouter);
-app.use('/patient', patientRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
