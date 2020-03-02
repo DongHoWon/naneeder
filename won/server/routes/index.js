@@ -27,4 +27,5 @@ router.get('/shop',function(req, res, next) {
   res.sendFile(path.join(__dirname ,"../views/naneed/", "shop.html"));
 });
 
+
 module.exports = router;
